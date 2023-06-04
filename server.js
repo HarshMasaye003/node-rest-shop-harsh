@@ -6,6 +6,8 @@ const {
   updateProduct,
   deleteProduct,
 } = require("./controllers/productController");
+const { readFileData } = require("./utils");
+const { read } = require("fs");
 
 const server = http.createServer((req, res) => {
   if (req.url === "/api/products" && req.method === "GET") {
@@ -31,10 +33,10 @@ const server = http.createServer((req, res) => {
     const id = req.url.split("/")[3];
     deleteProduct(req, res, id);
   } else {
-    res.writeHead(404, {
-      "Content-Type": "application/json",
+    res.writeHead(200, {
+      "Content-Type": "text/html",
     });
-    res.end(JSON.stringify({ message: "Route Not Found" }));
+    res.end(readFileData("./index.html"));
   }
 });
 

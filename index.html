@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Node REST Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        /* overflow-x: hidden; */
+      }
+
+      .heading {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Oswald", sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+
+      .apis {
+        padding: 20px;
+        font-family: "Roboto", sans-serif;
+      }
+
+      #products-apis .entity {
+        width: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 2px 0px 10px 0px;
+      }
+
+      #products-apis .entity .entity-name {
+        font-size: 20px;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+
+      #products-apis .entity .entity-description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        color: #595959;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      #products-apis .api {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      #products-apis .get-api {
+        border: 1px solid #61affe;
+        background-color: #ebf3fb;
+      }
+      #products-apis .post-api {
+        border: 1px solid #49cc90;
+        background-color: #e9f6f0;
+      }
+      #products-apis .put-api {
+        border: 1px solid #fca130;
+        background-color: #fbf2e6;
+      }
+      #products-apis .delete-api {
+        border: 1px solid #f93e3e;
+        background-color: #fbe8e8;
+      }
+
+      #products-apis .api .request-method {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        color: #ffffff;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 600;
+        flex-shrink: 0;
+      }
+
+      #products-apis .get-api .request-method {
+        background-color: #61affe;
+      }
+      #products-apis .post-api .request-method {
+        background-color: #49cc90;
+      }
+      #products-apis .put-api .request-method {
+        background-color: #fca130;
+      }
+      #products-apis .delete-api .request-method {
+        background-color: #f93e3e;
+      }
+
+      #products-apis .api .request-url {
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 1;
+      }
+
+      #products-apis .api .api-description {
+        color: #595959;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      Shop&nbsp;
+      <span style="color: #4338ca">REST API's</span>
+      &nbsp;using Vanilla&nbsp;
+      <span style="color: #5bab46">Node.js</span>
+    </div>
+    <div class="apis">
+      <div id="products-apis">
+        <div class="entity">
+          <div class="entity-name">Products</div>
+          <div class="entity-description">Everything about your Products</div>
+        </div>
+        <div class="api get-api">
+          <div class="request-method">GET</div>
+          <div class="request-url">/api/products</div>
+          <div class="api-description">Get All Products</div>
+        </div>
+        <div class="api get-api">
+          <div class="request-method">GET</div>
+          <div class="request-url">/api/products/{productId}</div>
+          <div class="api-description">Get Specific Product</div>
+        </div>
+        <div class="api post-api">
+          <div class="request-method">POST</div>
+          <div class="request-url">/api/products</div>
+          <div class="api-description">Add Product</div>
+        </div>
+        <div class="api put-api">
+          <div class="request-method">PUT</div>
+          <div class="request-url">/api/products/{productId}</div>
+          <div class="api-description">Update Product</div>
+        </div>
+        <div class="api delete-api">
+          <div class="request-method">DELETE</div>
+          <div class="request-url">/api/products/{productId}</div>
+          <div class="api-description">Delete Product</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

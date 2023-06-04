@@ -6,6 +6,11 @@ function writeDataToFile(filename, contents) {
   });
 }
 
+function readFileData(filename) {
+  let html = fs.readFileSync(filename, "utf-8");
+  return html;
+}
+
 function getPostData(req) {
   return new Promise((resolve, reject) => {
     try {
@@ -27,4 +32,5 @@ function getPostData(req) {
 module.exports = {
   writeDataToFile,
   getPostData,
+  readFileData,
 };
